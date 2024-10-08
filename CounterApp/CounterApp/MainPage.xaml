@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+x:Class="Counter.MainPage">
+
+<ScrollView>
+    <VerticalStackLayout
+        Padding="30,0"
+        Spacing="25">
+
+        <Label
+            Text="Clicked 0 times"
+            x:Name="CounterValue"
+            Style="{StaticResource SubHeadline}"
+            SemanticProperties.HeadingLevel="Level2"
+            SemanticProperties.Description="Welcome to dot net Multi platform App U I" />
+
+        <Button
+            x:Name="CounterBtnAdd"
+            Text="Add" 
+            Clicked="OnCounterClickedAdd"
+            HorizontalOptions="Fill" />
+
+        <Button
+            x:Name="CounterBtnDelete"
+            Text="Delete" 
+            Clicked="OnCounterClickedDelete"
+            HorizontalOptions="Fill" />
+    </VerticalStackLayout>
+</ScrollView>
+</ContentPage>
