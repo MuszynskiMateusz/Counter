@@ -47,20 +47,22 @@ public partial class MainPage : ContentPage
             var counterLayout = new StackLayout
             {
                 Orientation = StackOrientation.Horizontal,
-                Spacing = 10
+                Spacing = 10,
+                HorizontalOptions = LayoutOptions.Center
             };
 
             var counterLabel = new Label
             {
                 Text = $"{counter.Name}: {counter.Count}",
-                VerticalOptions = LayoutOptions.Center
+                VerticalOptions = LayoutOptions.Center,
+                HorizontalOptions = LayoutOptions.Center
             };
 
             var addButton = new Button
             {
                 Text = "+",
                 CommandParameter = counter,
-                HorizontalOptions = LayoutOptions.End
+                HorizontalOptions = LayoutOptions.Center 
             };
             addButton.Clicked += OnCounterAddClicked;
 
@@ -68,7 +70,7 @@ public partial class MainPage : ContentPage
             {
                 Text = "-",
                 CommandParameter = counter,
-                HorizontalOptions = LayoutOptions.End
+                HorizontalOptions = LayoutOptions.Center 
             };
             deleteButton.Clicked += OnCounterDeleteClicked;
 

@@ -1,0 +1,1 @@
+-v --force --timestamp=none --sign - --entitlements /Users/mateuszmuszynski/Projects/CounterAppFinal/CounterFinalVersion/Counter/Counter/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/Entitlements.xcent /Users/mateuszmuszynski/Projects/CounterAppFinal/CounterFinalVersion/Counter/Counter/bin/Debug/net8.0-maccatalyst/maccatalyst-arm64/Counter.app
