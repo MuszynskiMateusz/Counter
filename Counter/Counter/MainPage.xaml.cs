@@ -44,16 +44,21 @@ public partial class MainPage : ContentPage
         CountersStack.Children.Clear();
         foreach (var counter in counters)
         {
-            var counterLayout = new StackLayout
+            var counterLayout = new Grid
             {
-                Orientation = StackOrientation.Horizontal,
-                Spacing = 10,
-                HorizontalOptions = LayoutOptions.Center
+                ColumnDefinitions =
+            {
+                new ColumnDefinition { Width = new GridLength(1, GridUnitType.Auto) },
+                new ColumnDefinition { Width = new GridLength(1, GridUnitType.Star) },
+                new ColumnDefinition { Width = new GridLength(1, GridUnitType.Auto) }
+            },
+                HorizontalOptions = LayoutOptions.FillAndExpand,
+                Margin = new Thickness(0, 5)
             };
 
             var counterLabel = new Label
             {
-                Text = $"{counter.Name}: {counter.Count}",
+                Text = $"{counter.Name}\n {counter.Count}",
                 VerticalOptions = LayoutOptions.Center,
                 HorizontalOptions = LayoutOptions.Center
             };
@@ -62,7 +67,7 @@ public partial class MainPage : ContentPage
             {
                 Text = "+",
                 CommandParameter = counter,
-                HorizontalOptions = LayoutOptions.Center 
+                HorizontalOptions = LayoutOptions.End
             };
             addButton.Clicked += OnCounterAddClicked;
 
@@ -70,13 +75,17 @@ public partial class MainPage : ContentPage
             {
                 Text = "-",
                 CommandParameter = counter,
-                HorizontalOptions = LayoutOptions.Center 
+                HorizontalOptions = LayoutOptions.Start
             };
             deleteButton.Clicked += OnCounterDeleteClicked;
 
             counterLayout.Children.Add(deleteButton);
+            Grid.SetColumn(deleteButton, 0);
             counterLayout.Children.Add(counterLabel);
+            Grid.SetColumn(counterLabel, 1);
             counterLayout.Children.Add(addButton);
+            Grid.SetColumn(addButton, 2);
+
             CountersStack.Children.Add(counterLayout);
         }
     }
