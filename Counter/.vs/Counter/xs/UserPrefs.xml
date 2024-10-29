@@ -1,4 +1,29 @@
 ﻿<Properties StartupConfiguration="{F95AB6A9-BED5-416B-8E85-4234F17FD0A3}|Default">
-  <MonoDevelop.Ide.ItemProperties.Counter FirstBuild="True" />
+  <Xamarin.Addins.Core.Project ActiveDebugTarget="MyAppleMacCatalystID" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Counter/MainPage.xaml.cs">
+    <Files>
+      <File FileName="Counter/MainPage.xaml.cs" Line="111" Column="6" />
+      <File FileName="Counter/MainPage.xaml" Line="38" Column="15" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Counter">
+            <Node name="Counter">
+              <Node name="MainPage.xaml">
+                <Node name="MainPage.xaml.cs" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.Counter PreferredExecutionTarget="MyAppleMacCatalystID" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MultiItemStartupConfigurations />
 </Properties>
