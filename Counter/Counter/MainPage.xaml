@@ -1,42 +1,38 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Counter.MainPage">
+             x:Class="Counter.MainPage"
+             x:Name="mainPage">
 
     <ScrollView>
-        <VerticalStackLayout
-            Padding="30,0"
-            Spacing="25">
-
-            <Label
-                Text="Add a new counter"
-                Style="{StaticResource SubHeadline}"
-                SemanticProperties.HeadingLevel="Level2" />
-
-            <Entry
-                x:Name="CounterNameEntry"
-                Placeholder="Name"
-                HorizontalOptions="Fill" />
-            <Entry
-                x:Name="CounterValueEntry"
-                Placeholder="Start Value"
-                Keyboard="Numeric"
-                HorizontalOptions="Fill" />
-
-            <Button
-                Text="Add Counter" 
-                Clicked="OnAddCounterClicked"
-                HorizontalOptions="Fill" />
-
+        <VerticalStackLayout Padding="30,0" Spacing="25">
             
+            <Label Text="Add a new counter" Style="{StaticResource SubHeadline}" SemanticProperties.HeadingLevel="Level2" />
 
-            <Label
-                Text="Counters"
-                Style="{StaticResource SubHeadline}"
-                SemanticProperties.HeadingLevel="Level2" />
+            <Entry x:Name="CounterNameEntry" Placeholder="Name" HorizontalOptions="Fill" />
+            <Entry x:Name="CounterValueEntry" Placeholder="Start Value" Keyboard="Numeric" HorizontalOptions="Fill" />
 
-            <StackLayout x:Name="CountersStack" />
+            <Button Text="Add Counter" Clicked="OnAddCounterClicked" HorizontalOptions="Fill" />
+
+            <Label Text="Counters" Style="{StaticResource SubHeadline}" SemanticProperties.HeadingLevel="Level2" />
+
+            <CollectionView ItemsSource="{Binding counters}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <VerticalStackLayout Margin="0,10,0,10">
+                            <Grid ColumnDefinitions="Auto,*,Auto">
+                                <Button Text="-" Clicked="OnCounterDeleteClicked" />
+                                <VerticalStackLayout
+                                    HorizontalOptions="Center"
+                                    Grid.Column="1">
+                                    <Label Text="{Binding Name}" VerticalOptions="Center" HorizontalOptions="Center" Grid.Column="1" />
+                                    <Label Text="{Binding Count}" VerticalOptions="Center" HorizontalOptions="Center" Grid.Column="1"/>
+                                </VerticalStackLayout>
+                                <Button Text="+" Clicked="OnCounterAddClicked" Grid.Column="2" />
+                            </Grid>
+                        </VerticalStackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
         </VerticalStackLayout>
     </ScrollView>
-
 </ContentPage>
