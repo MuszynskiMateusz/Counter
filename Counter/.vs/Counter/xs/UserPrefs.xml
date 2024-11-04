@@ -2,15 +2,15 @@
   <Xamarin.Addins.Core.Project ActiveDebugTarget="MyAppleMacCatalystID" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Counter/MainPage.xaml.cs">
     <Files>
-      <File FileName="Counter/MainPage.xaml.cs" Line="111" Column="6" />
-      <File FileName="Counter/MainPage.xaml" Line="38" Column="15" />
+      <File FileName="Counter/MainPage.xaml.cs" Line="17" Column="1" />
+      <File FileName="Counter/MainPage.xaml" Line="13" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Counter">
             <Node name="Counter">
-              <Node name="MainPage.xaml">
+              <Node name="MainPage.xaml" expanded="True">
                 <Node name="MainPage.xaml.cs" selected="True" />
               </Node>
             </Node>
